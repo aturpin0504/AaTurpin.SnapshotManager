@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>AaTurpin.SnapshotManager</id>
+    <version>1.0.0</version>
+    <title>AaTurpin.SnapshotManager</title>
+    <authors>aaturpin</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
+    <description>
+      A robust .NET library for managing file snapshots across network locations with high reliability and error recovery.
+
+      SnapshotManager provides network-aware file operations with automatic retry mechanisms, delta detection between snapshots for efficient synchronization, parallel processing with configurable concurrency limits, and intelligent handling of incomplete snapshots due to network issues.
+
+      Key features:
+      - Create reliable file and directory snapshots even in unstable network environments
+      - Compare snapshots to identify added, modified, and deleted files
+      - Recover from network issues and timeout conditions automatically
+      - Configure network timeout handling for different environments
+      - Historical tracking to validate snapshot completeness
+      - Optimized for enterprise file synchronization scenarios
+
+      Particularly useful for maintaining synchronized copies of network shares, creating backup systems, or implementing high-availability file replication.
+    </description>
+    <releaseNotes>
+      Initial release of the SnapshotManager library.
+      - Robust snapshot creation and comparison
+      - Network-aware file operations
+      - Error recovery mechanisms
+      - Configurable timeouts
+    </releaseNotes>
+    <copyright>Copyright 2025</copyright>
+    <tags>file-management, network-file-operations, snapshot, synchronization, file-sync, delta-detection, error-recovery, network-resilience, high-availability, enterprise</tags>
+    <readme>README.md</readme>
+  </metadata>
+  <files>
+    <file src="README.md" target="README.md" />
+  </files>
+</package>
