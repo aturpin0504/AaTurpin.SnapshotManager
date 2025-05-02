@@ -8,7 +8,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <!-- <icon>icon.png</icon> -->
-    <projectUrl>http://project_url_here_or_delete_this_line/</projectUrl>
+    <projectUrl>https://github.com/aturpin0504/AaTurpin.SnapshotManager</projectUrl>
     <description>
       A robust .NET library for managing file snapshots across network locations with high reliability and error recovery.
 
