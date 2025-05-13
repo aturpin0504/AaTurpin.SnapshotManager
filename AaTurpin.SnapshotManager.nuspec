@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AaTurpin.SnapshotManager</id>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <title>AaTurpin.SnapshotManager</title>
     <authors>aaturpin</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,11 +25,33 @@
       Particularly useful for maintaining synchronized copies of network shares, creating backup systems, or implementing high-availability file replication.
     </description>
     <releaseNotes>
-      Initial release of the SnapshotManager library.
-      - Robust snapshot creation and comparison
-      - Network-aware file operations
-      - Error recovery mechanisms
-      - Configurable timeouts
+      Version 2.0.0 - Major architectural simplification and rewrite.
+
+      BREAKING CHANGES:
+      - Removed async/await support - all operations now synchronous
+      - Simplified data structures for better performance
+      - Replaced SyncOperations with SnapshotComparisonResult
+      - Removed advanced features: snapshot recovery, history tracking, network timeouts
+      - New dual logger support for operations and deletions
+
+      ADDED:
+      - Built-in JSON serialization (SimpleJsonSerializer, JsonReader)
+      - Enhanced error handling for network operations
+      - Improved retry mechanisms for transient failures
+      - Better integration with ConfigManager
+
+      REMOVED:
+      - SnapshotRecovery system
+      - Async cancellation support
+      - Snapshot validation and history
+      - Network timeout configuration
+      - Complex merge operations
+
+      MIGRATION REQUIRED: This is not backward compatible with v1.x.x
+      - Replace await SnapshotManager.CreateSnapshotAsync() with SnapshotManager.CreateSnapshot()
+      - Update logger setup from SetLogger() to SetLoggers(mainLogger, deletionLogger)
+      - Change SyncOperations handling to SnapshotComparisonResult
+      - Update data access from snapshot.Files to snapshot.Directories
     </releaseNotes>
     <copyright>Copyright 2025</copyright>
     <tags>file-management, network-file-operations, snapshot, synchronization, file-sync, delta-detection, error-recovery, network-resilience, high-availability, enterprise</tags>

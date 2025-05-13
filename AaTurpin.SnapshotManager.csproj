@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConfigManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\AaTurpin.ConfigManager.1.1.0\lib\net472\ConfigManager.dll</HintPath>
+      <HintPath>packages\AaTurpin.ConfigManager.1.2.0\lib\net472\ConfigManager.dll</HintPath>
     </Reference>
     <Reference Include="RunLog, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\RunLog.3.2.0\lib\net472\RunLog.dll</HintPath>
+      <HintPath>packages\RunLog.3.3.0\lib\net472\RunLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatchFileOperationResult.cs" />
+    <Compile Include="DirectorySnapshot.cs" />
+    <Compile Include="FileItem.cs" />
+    <Compile Include="FileOperation.cs" />
+    <Compile Include="FileOperationOptions.cs" />
+    <Compile Include="FileOperationResult.cs" />
+    <Compile Include="FileSnapshot.cs" />
+    <Compile Include="JsonReader.cs" />
+    <Compile Include="NetworkFileManager.cs" />
+    <Compile Include="SimpleJsonSerializer.cs" />
+    <Compile Include="SnapshotComparisonResult.cs" />
     <Compile Include="SnapshotManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
